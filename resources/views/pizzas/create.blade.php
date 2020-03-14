@@ -6,7 +6,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Pizzas List - {{ $id }}
+            Add a new pizza
         </div>
        
 
