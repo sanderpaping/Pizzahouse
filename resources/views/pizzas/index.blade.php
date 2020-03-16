@@ -2,17 +2,15 @@
 
 @section('content')
 <div class="flex-center position-ref full-height">
-
-
     <div class="content">
         <div class="title m-b-md">
-            Pizzas List
+            Pizza List
         </div>
-        <p>{{ $name }} - {{ $age }}</p>
+
         @foreach($pizzas as $pizza)
-            <div>
-                {{$pizza->name}} -  {{$pizza->type}} - {{$pizza->base}}
-            </div>
+          <div>
+            <a href="/pizzas/{{ $pizza->id }}">{{ $pizza->name }}</a>
+          </div>
         @endforeach
 
     </div>

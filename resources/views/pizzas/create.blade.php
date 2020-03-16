@@ -1,15 +1,28 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="flex-center position-ref full-height">
+<div class="wrapper create-pizza">
+<h1>Create a new pizza</h1>
+<form action="/pizzas" method="POST">
+    @csrf
+    <label for="name">Your name:</label>
+    <input type="text" name="name" id="name">
+    <label for="type">Choose your pizzatype:</label>
+    <select name="type" id="type">
+        <option value="margarita">Margarita</option>
+        <option value="hawaiian">Hawaiian</option>
+        <option value="veg supreme">Veg supreme</option>
+        <option value="Vulcano">Vulcano</option>
+    </select>
 
-
-    <div class="content">
-        <div class="title m-b-md">
-            Add a new pizza
-        </div>
-       
-
-    </div>
+    <label for="base">Choose your base:</label>
+    <select name="base" id="base">
+        <option value="cheesy crust">Cheesy crust</option>
+        <option value="garlic crust">Garlic crust</option>
+        <option value="thin and crispy">Thin and crispy</option>
+        <option value="thick">Thick</option>
+    </select>
+    <input type="submit" value="Order pizza">
+</form>
 </div>
 @endsection
