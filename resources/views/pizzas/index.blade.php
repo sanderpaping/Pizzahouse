@@ -9,7 +9,7 @@
 
         @foreach($pizzas as $pizza)
           <div>
-            <a href="/pizzas/{{ $pizza->id }}">{{ $pizza->name }}</a>
+            <a href="/pizzas/{{ $pizza->id }}">{{ $pizza->name }} {{ $pizza->type }} {{ $pizza->base}}</a>
           </div>
         @endforeach
 
